@@ -68,6 +68,29 @@ namespace uNhAddIns.Test.UserTypes
 		}
 
 		[Test]
+		public void ModifyProperties()
+		{
+			FillDb();
+			using (ISession s = OpenSession())
+			{
+				var e = s.Get<EntityWithLocalizableProperty>(savedId);
+				e.LocalizableDescriptions.Remove(new CultureInfo("es-AR"));
+				e.LocalizableDescriptions[new CultureInfo("en-US")] = "Hi!";
+				s.Flush();
+			}
+			using (ISession s = OpenSession())
+			{
+				var e = s.Get<EntityWithLocalizableProperty>(savedId);
+				e.LocalizableDescriptions.Should().Have.SameSequenceAs(new[]
+				                                                   	{
+				                                                   		new KeyValuePair<CultureInfo, string>(
+				                                                   			new CultureInfo("en-US"), "Hi!")
+				                                                   	});
+			}
+			Cleanup();
+		}
+
+		[Test]
 		public void SaveNull()
 		{
 			using (ISession s = OpenSession())

@@ -49,17 +49,18 @@ namespace uNhAddIns.UserTypes
 
 		public new bool Equals(object x, object y)
 		{
-			if (ReferenceEquals(x, y))
+			if (ReferenceEquals(null, x) && ReferenceEquals(null, y))
 			{
 				return true;
 			}
-
 			if (ReferenceEquals(null, x) || ReferenceEquals(null, y))
 			{
 				return false;
 			}
+			var convertedX = ((IDictionary<CultureInfo, string>)x).ToString(DefaultKeyValueEncloser);
+			var convertedY = ((IDictionary<CultureInfo, string>)y).ToString(DefaultKeyValueEncloser);
 
-			return x.Equals(y);
+			return convertedX.Equals(convertedY);
 		}
 
 		public int GetHashCode(object x)
@@ -95,28 +96,28 @@ namespace uNhAddIns.UserTypes
 			}
 			else
 			{
-				((IDbDataParameter)cmd.Parameters[index]).Value = ((IDictionary<CultureInfo, string>)value).ToString('~');
+				((IDbDataParameter)cmd.Parameters[index]).Value = ((IDictionary<CultureInfo, string>)value).ToString(DefaultKeyValueEncloser);
 			}
 		}
 
 		public object DeepCopy(object value)
 		{
-			return value;
+			return value == null ? null : new Dictionary<CultureInfo, string>((IDictionary<CultureInfo, string>)value);
 		}
 
 		public object Replace(object original, object target, object owner)
 		{
-			return original;
+			return DeepCopy(original);
 		}
 
 		public object Assemble(object cached, object owner)
 		{
-			return cached;
+			return DeepCopy(cached);
 		}
 
 		public object Disassemble(object value)
 		{
-			return value;
+			return DeepCopy(value);
 		}
 
 		public SqlType[] SqlTypes
@@ -131,7 +132,7 @@ namespace uNhAddIns.UserTypes
 
 		public bool IsMutable
 		{
-			get { return false; }
+			get { return true; }
 		}
 
 		#endregion
