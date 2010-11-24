@@ -1,0 +1,21 @@
+﻿<span class="header">These products was loaded lazily</span>
+<hr />
+<br />
+<div id="content">
+<table class="grid">
+    <thead>
+		<th>Name</th>
+        <th>Price</th>
+		<th>CreatedOn</th>
+    </thead>
+    <tbody>
+<% for i in item.Products : %>
+     <tr>
+      <td>${i.Name}</td>
+	  <td>${i.Price}</td>
+	  <td>${i.CreatedOn.ToString("HH:mm")}</td>
+     </tr>
+<% end %>
+    </tbody>
+</table>
+</div>

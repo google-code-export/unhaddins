@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ChinookMediaManager.GUI.Shell.ShellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			 xmlns:cal="http://www.caliburnproject.org"
+			 MinHeight="300" MinWidth="600">
+
+	<UserControl.Resources>
+		<BooleanToVisibilityConverter x:Key="VisibilityConverter" />
+	</UserControl.Resources>
+	<DockPanel LastChildFill="True">
+
+		<ToolBar DockPanel.Dock="Top">
+			<Button cal:Message.Attach="[Event Click] = [Action ShowAlbums]" Width="70">
+				<StackPanel>
+					<Image Source="/Resources/Images/albums.jpg" Width="32" Height="32" />
+					<TextBlock Text="Albums"/>
+				</StackPanel>
+			</Button>
+		</ToolBar>
+
+		<TabControl x:Name="PresenterHost"
+                    ItemsSource="{Binding Items}" 
+                    SelectedItem="{Binding Path=ActiveItem}" 
+                    Margin="5">
+
+			<TabControl.ItemTemplate>
+				<DataTemplate>
+					<ContentControl>
+						<DockPanel>
+							<Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Visibility="{Binding CanShutdown, Mode=TwoWay, Converter={StaticResource VisibilityConverter}}"
+                                    Width="15" 
+                                    Margin="2,0,0,0" 
+                                    cal:Message.Attach="[Event Click] = [Action ShutdownPresenter($datacontext)]"
+                                    DockPanel.Dock="Right">
+								<Path Stretch="Fill" StrokeThickness="0.5" 
+                                      Stroke="#FF333333" Fill="#FF969696" 
+                                      Data="F1 M 2.28484e-007,1.33331L 1.33333,0L 4.00001,2.66669L 6.66667,6.10352e-005L 8,1.33331L 5.33334,4L 8,6.66669L 6.66667,8L 4,5.33331L 1.33333,8L 1.086e-007,6.66669L 2.66667,4L 2.28484e-007,1.33331 Z " 
+                                      HorizontalAlignment="Stretch" 
+                                      VerticalAlignment="Stretch"/>
+							</Button>
+							<TextBlock Text="{Binding DisplayName}" />
+						</DockPanel>
+					</ContentControl>
+				</DataTemplate>
+			</TabControl.ItemTemplate>
+
+			<TabControl.ContentTemplate>
+				<DataTemplate>
+					<ContentControl cal:View.Model="{Binding}" />
+				</DataTemplate>
+			</TabControl.ContentTemplate>
+
+		</TabControl>
+	</DockPanel>
+
+</UserControl>

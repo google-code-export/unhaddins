@@ -1,0 +1,293 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36E6304A-EACB-41B9-ADF1-E81BE6EDF0CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>uNhAddIns.Test</RootNamespace>
+    <AssemblyName>uNhAddIns.Test</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>1591;3001;3002;3003;3005</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy, Version=1.0.3233.760, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu, Version=2.1.0.1001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache, Version=2.1.0.1001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnitEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NUnitEx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aReposEmul\GenericNHibernateDAO.cs" />
+    <Compile Include="Audit\Address.cs" />
+    <Compile Include="Audit\Animal.cs" />
+    <Compile Include="Audit\MappingAuditableMetaDataStoreFixture.cs" />
+    <Compile Include="Audit\Person.cs" />
+    <Compile Include="Audit\Simple.cs" />
+    <Compile Include="Audit\TriggerGenerator\AbstractAuditColumnSourceFixture.cs" />
+    <Compile Include="Audit\TriggerGenerator\AuditColumnSourceFixture.cs" />
+    <Compile Include="Audit\TriggerGenerator\AbstractNamingStrategyFixture.cs" />
+    <Compile Include="Audit\TriggerGenerator\Cat.cs" />
+    <Compile Include="Audit\TriggerGenerator\CatAudit.cs" />
+    <Compile Include="Audit\TriggerGenerator\Dialects\DialectMapFixture.cs" />
+    <Compile Include="Audit\TriggerGenerator\Dialects\DummyExtendedDialect.cs" />
+    <Compile Include="Audit\TriggerGenerator\IntegrationFixture.cs" />
+    <Compile Include="Audit\TriggerGenerator\NamingStrategyFixture.cs" />
+    <Compile Include="Cache\ConfigurationExtensionsFixture.cs" />
+    <Compile Include="Cache\CustomQcStub.cs" />
+    <Compile Include="Cache\Entities.cs" />
+    <Compile Include="Cache\FullIntegrationFixture.cs" />
+    <Compile Include="Cache\RegionQueryCacheFactoryFixture.cs" />
+    <Compile Include="Cache\TolerantQueryCacheConfExpressionBuilderFixture.cs" />
+    <Compile Include="Cache\TolerantQueryCacheFixture.cs" />
+    <Compile Include="Conversations\ConversationExceptionFixture.cs" />
+    <Compile Include="Conversations\ConversationFixture.cs" />
+    <Compile Include="Conversations\DefaultConversationFactoryFixture.cs" />
+    <Compile Include="Conversations\ThreadLocalConversationalSessionContextThreadedFixture.cs" />
+    <Compile Include="Conversations\Domain.cs" />
+    <Compile Include="Conversations\NHConversationFixture.cs" />
+    <Compile Include="Conversations\NhConversationsContainerAccessorFixture.cs" />
+    <Compile Include="Conversations\SessionFactoryProviderStub.cs" />
+    <Compile Include="Conversations\SillyDao.cs" />
+    <Compile Include="Conversations\TestConversation.cs" />
+    <Compile Include="Conversations\ThreadLocalConversationalSessionContextFixture.cs" />
+    <Compile Include="Conversations\ThreadLocalConversationContainerFixture.cs" />
+    <Compile Include="CriterionTest\StartsWithCriterionTest.cs" />
+    <Compile Include="CriterionTest\CriterionTest.cs" />
+    <Compile Include="CriterionTest\LocalizableRestrictionFixture.cs" />
+    <Compile Include="CriterionTest\Simple.cs" />
+    <Compile Include="DebugConnectionProvider.cs" />
+    <Compile Include="DynamicQuery\DetachedDynQueryFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DynamicQuery\DynQueryFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\EnumerablesFixture.cs" />
+    <Compile Include="Extensions\ReflectionExtensionsFixture.cs" />
+    <Compile Include="Extensions\StringFixture.cs" />
+    <Compile Include="Inflector\BaseInflectorFixture.cs" />
+    <Compile Include="Inflector\EnglishInflectorFixture.cs" />
+    <Compile Include="Inflector\InflectorExtensionsFixture.cs" />
+    <Compile Include="Inflector\ItalianInflectorFixture.cs" />
+    <Compile Include="Inflector\RuleFixture.cs" />
+    <Compile Include="Inflector\SpanishInflectorFixture.cs" />
+    <Compile Include="Listeners\AutoDirtyCheck\Domain.cs" />
+    <Compile Include="Listeners\AutoDirtyCheck\DomainBuilders.cs" />
+    <Compile Include="Listeners\AutoDirtyCheck\Fixture.cs" />
+    <Compile Include="Mapping\MappingExtensionsFixture.cs" />
+    <Compile Include="Mapping\Simple.cs" />
+    <Compile Include="Pagination\AbstractPaginableCriteriaFixture.cs" />
+    <Compile Include="Pagination\AbstractPaginableQueryFixture.cs" />
+    <Compile Include="Pagination\BasePaginatorFixture.cs" />
+    <Compile Include="Pagination\PaginableCriteriaFixture.cs" />
+    <Compile Include="Pagination\PaginableDynQueryFixture.cs" />
+    <Compile Include="Pagination\PaginableRowsCounterQueryFixture.cs" />
+    <Compile Include="Pagination\AbstractPaginableCommonTest.cs" />
+    <Compile Include="Pagination\PaginationTestBase.cs" />
+    <Compile Include="Pagination\QueryRowsCounterFixture.cs" />
+    <Compile Include="Pagination\Foo.cs" />
+    <Compile Include="Pagination\NamedQueryRowsCounterFixture.cs" />
+    <Compile Include="Pagination\PaginableQueryFixture.cs" />
+    <Compile Include="Pagination\PaginatorFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\ClonerFixture.cs" />
+    <Compile Include="Serialization\Foo.cs" />
+    <Compile Include="Serialization\FooChild.cs" />
+    <Compile Include="SessionEasier\NoWrappedSessionWrapperFixture.cs" />
+    <Compile Include="SessionEasier\Other.cs" />
+    <Compile Include="SessionEasier\Contexts\ThreadLocalSessionContextFixture.cs" />
+    <Compile Include="SessionEasier\DefaultMultiFactoryConfigurationProviderFixture.cs" />
+    <Compile Include="SessionEasier\DefaultSessionFactoryConfigurationProviderFixture.cs" />
+    <Compile Include="SessionEasier\MultiSessionFactoryProviderFixture.cs" />
+    <Compile Include="SessionEasier\SessionFactoryProviderFixture.cs" />
+    <Compile Include="SessionEasier\Silly2.cs" />
+    <Compile Include="SessionEasier\TestConfigurationHelper.cs" />
+    <Compile Include="SessionEasier\TransactionProtectionWrapperFixture.cs" />
+    <Compile Include="TestCase.cs" />
+    <Compile Include="TestHelpers.cs" />
+    <Compile Include="Transform\DelegateResultTransformer.cs" />
+    <Compile Include="Transform\PosToBeanResultTransformer.cs" />
+    <Compile Include="UserTypes\GenericWellKnownInstanceTypeFixture.cs" />
+    <Compile Include="UserTypes\EntityWithLocalizableProperty.cs" />
+    <Compile Include="UserTypes\EntityWithPropNames.cs" />
+    <Compile Include="UserTypes\LocalizablePropertyFixture.cs" />
+    <Compile Include="UserTypes\PersonMitaMita.cs" />
+    <Compile Include="UserTypes\PropertiesNamesIntegrationFixture.cs" />
+    <Compile Include="UserTypes\TrimmedStringFixture.cs" />
+    <Compile Include="UserTypes\EncryptedStringFixture.cs" />
+    <Compile Include="UserTypes\Foo.cs" />
+    <Compile Include="UserTypes\UpperStringFixture.cs" />
+    <Compile Include="UserTypes\User.cs" />
+    <Compile Include="UserTypes\UserMitaMita.cs" />
+    <Compile Include="UserTypes\WellKnownInstanceTypeFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\uNhAddIns.TestUtils\uNhAddIns.TestUtils.csproj">
+      <Project>{7512944F-2C52-44E2-8287-2BD39DE552F1}</Project>
+      <Name>uNhAddIns.TestUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\uNhAddIns\uNhAddIns.csproj">
+      <Project>{59233B1D-6DDE-4C05-A9E9-D0A1A8144112}</Project>
+      <Name>uNhAddIns</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Listeners\AutoDirtyCheck\DomainDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pagination\PagTest.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CriterionTest\Simple.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserTypes\UpperStringMappings.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conversations\Silly.hbm.xml" />
+    <EmbeddedResource Include="Cache\Items.hbm.xml" />
+    <EmbeddedResource Include="Audit\Person.hbm.xml" />
+    <EmbeddedResource Include="Audit\Simple.hbm.xml" />
+    <EmbeddedResource Include="Audit\Address.hbm.xml" />
+    <EmbeddedResource Include="Audit\Animal.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Simple.hbm.xml" />
+    <EmbeddedResource Include="Listeners\AutoDirtyCheck\Domain.hbm.xml" />
+    <EmbeddedResource Include="SessionEasier\Silly2.hbm.xml" />
+    <EmbeddedResource Include="Audit\TriggerGenerator\Cat.hbm.xml" />
+    <EmbeddedResource Include="Audit\TriggerGenerator\CatAudit.hbm.xml" />
+    <Content Include="TestConfig1.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestConfig2.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestConfigWithFactoryName.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="UserTypes\PersonMitaMita.hbm.xml" />
+    <EmbeddedResource Include="UserTypes\UserMitaMita.hbm.xml" />
+    <EmbeddedResource Include="UserTypes\EntityWithLocalizableProperty.hbm.xml" />
+    <EmbeddedResource Include="UserTypes\EntityWithPropNames.hbm.xml" />
+    <EmbeddedResource Include="UserTypes\User.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if exist hibernate.cfg.xml (del hibernate.cfg.xml)
+if exist "$(ProjectDir)hibernate.cfg.xml" (copy "$(ProjectDir)hibernate.cfg.xml" "hibernate.cfg.xml")
+if exist TestConfig1.cfg.xml (del TestConfig1.cfg.xml)
+if exist "$(ProjectDir)TestConfig1.cfg.xml" (copy "$(ProjectDir)TestConfig1.cfg.xml" "TestConfig1.cfg.xml")
+if exist TestConfig2.cfg.xml (del TestConfig2.cfg.xml)
+if exist "$(ProjectDir)TestConfig2.cfg.xml" (copy "$(ProjectDir)TestConfig2.cfg.xml" "TestConfig2.cfg.xml")
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+   <session-factory>
+      <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+      <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+      <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+      <property name="connection.connection_string">data source=.;Integrated Security=SSPI;database=unhaddins_mr</property>
+      <property name="default_schema">dbo</property>
+      <property name="current_session_context_class">
+        uNhAddIns.Web.SessionEasier.Conversations.ConversationWebSessionContext, uNhAddIns.Web
+      </property>
+     <property name="proxyfactory.factory_class">NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
+     <property name="show_sql">true</property>
+     <property name="generate_statistics">true</property>
+     <mapping assembly="uNhAddIns.Example.MonoRailConversationUsage"/>
+   </session-factory>
+</hibernate-configuration>

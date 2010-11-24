@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="YourPrjDomain"
+				   namespace="YourPrjDomain.CompositeId"
+				   default-access="field.camelcase"
+				   default-lazy="false">
+
+	<class name="Person" table="TBL_PERSON">
+		<id name="Dni" type="string">
+			<generator class="assigned"/>
+		</id>
+		<property name="Name"/>
+	</class>
+	
+	<class name="Order" table="TBL_ORDER">
+		<composite-id name="OrderId" class="Order+OrderIdType">
+			<key-property name="Prefix"/>
+			<key-property name="OrderNumber"/>
+		</composite-id>
+		<many-to-one name="Person" not-null="true"/>
+	</class>
+
+</hibernate-mapping>

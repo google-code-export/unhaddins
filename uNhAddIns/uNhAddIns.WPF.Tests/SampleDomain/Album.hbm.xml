@@ -1,0 +1,27 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="uNhAddIns.WPF.Tests"
+        				   namespace="uNhAddIns.WPF.Tests.SampleDomain">
+
+  <!--slightly modified chinook-->
+
+  <class name="Album">
+    <id name="Id" column="AlbumId">
+      <generator class="hilo"/>
+    </id>
+    <property name="Title" />
+    <list name="Tracks" cascade="all" 
+      collection-type="uNhAddIns.WPF.Collections.Types.ObservableListType`1[Track], uNhAddIns.WPF">
+      <key column="AlbumId" />
+      <index column="TrackNumber" />
+      <one-to-many class="Track" />
+    </list>
+  </class>
+
+  <class name="Track">
+    <id name="Id" column="TrackId">
+      <generator class="hilo"/>
+    </id>
+    <property name="Name" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,156 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0064BE19-01B7-4F22-A7E0-AABBE8769D6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>uNHAddins.Examples.Course.Tests</RootNamespace>
+    <AssemblyName>uNHAddins.Examples.Course.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Highlighter.Net, Version=2.0.0.1, Culture=neutral, PublicKeyToken=0488c6112e74fa0b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LuceneContrib\Highlighter.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.0.0.4, Culture=neutral, PublicKeyToken=255f08c3cb6b422d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Search, Version=2.0.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SimilarityNet, Version=2.0.0.1, Culture=neutral, PublicKeyToken=5ca50220b181ac01, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LuceneContrib\SimilarityNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Snowball.Net, Version=2.0.0.1, Culture=neutral, PublicKeyToken=54d152cf5a8b1c3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LuceneContrib\Snowball.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SpellChecker.Net, Version=2.0.0.1, Culture=neutral, PublicKeyToken=1204173033f9a0fe, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LuceneContrib\SpellChecker.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="uNhAddIns, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\uNhAddIns.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Associations\IdBagFixture.cs" />
+    <Compile Include="Associations\ManyToManyFixture.cs" />
+    <Compile Include="Associations\OneToOneFixture.cs" />
+    <Compile Include="Core\AnimalFixture.cs" />
+    <Compile Include="Core\NamedQueryAndFirstLevelCacheFixture.cs" />
+    <Compile Include="Core\FirstLevelCacheFixture.cs" />
+    <Compile Include="Core\CriteriaAndFirstLevelCacheFixture.cs" />
+    <Compile Include="Core\ComponentFixture.cs" />
+    <Compile Include="Criteria\CriteriaFixture.cs" />
+    <Compile Include="DebugConnectionProvider.cs" />
+    <Compile Include="EventListeners\EventListenersFixture.cs" />
+    <Compile Include="Filters\FiltersTest.cs" />
+    <Compile Include="Ids\AInt32.cs" />
+    <Compile Include="Ids\AInt64.cs" />
+    <Compile Include="Ids\CompositeIdFixture.cs" />
+    <Compile Include="Ids\IdsFixture.cs" />
+    <Compile Include="Inheritance\MixingPerClassWithSubclass.cs" />
+    <Compile Include="Inheritance\TablePerSubclassFixture.cs" />
+    <Compile Include="Inheritance\TablePerClassHierarchyFixture.cs" />
+    <Compile Include="Inheritance\InheritanceTestCase.cs" />
+    <Compile Include="Inheritance\TablePerConcreteClassFixture.cs" />
+    <Compile Include="MasterDetail\MasterDetailFixture.cs" />
+    <Compile Include="NativeSql\AnimalFixture.cs" />
+    <Compile Include="LazyLoad\BehaviourFixture.cs" />
+    <Compile Include="OptimisticLock\OLFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaUtil.cs" />
+    <Compile Include="Search\EnglishAnalyzer.cs" />
+    <Compile Include="Search\SearchFixture.cs" />
+    <Compile Include="SqlLogSpy.cs" />
+    <Compile Include="TemporaryOffLog.cs" />
+    <Compile Include="TestCase.cs" />
+    <Compile Include="Transformers\TransformersFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YourPrjDomain\YourPrjDomain.csproj">
+      <Project>{0B2F382D-1956-420F-BBF0-CECAE74AC48B}</Project>
+      <Name>YourPrjDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if exist hibernate.cfg.xml (del hibernate.cfg.xml)
+if exist "$(ProjectDir)hibernate.cfg.xml" (copy "$(ProjectDir)hibernate.cfg.xml" "hibernate.cfg.xml")</PostBuildEvent>
+  </PropertyGroup>
+</Project>

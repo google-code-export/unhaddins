@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+				   assembly="YourPrjDomain" 
+				   namespace="YourPrjDomain.Filters"
+				   default-lazy="false">
+
+	<class name="Person">
+		<id name="Id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="Name"/>
+
+		<property name="Live" type="Boolean" />
+		<filter name="LiveFilter" condition=":isLive = Live"/>
+		<filter name="MinNameFilter"><![CDATA[Name > :minName]]></filter>
+	</class>
+
+	<filter-def name="LiveFilter">
+		<filter-param name="isLive" type="boolean"/>
+	</filter-def>
+
+	<filter-def name="MinNameFilter">
+		<filter-param name="minName" type="string"/>
+	</filter-def>
+
+
+
+</hibernate-mapping>

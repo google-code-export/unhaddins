@@ -1,0 +1,207 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:ProductDao.cs" caret="612" fromTop="12" />
+      <File id="B07A92C9-3280-4BF5-89E1-B2CF170297E2/f:TestFixture.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Entities/f:Product.cs" caret="13" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IWithSessionId.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IProductDao.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IEntityWithTypeId.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IEntity.cs" caret="144" fromTop="3" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IDaoWithTypeId.cs" caret="366" fromTop="10" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IDao.cs" caret="146" fromTop="1" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:Domain.hbm.xml" caret="471" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:BaseDao.cs" caret="535" fromTop="4" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:log4net.config" caret="377" fromTop="9" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Default.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Default.aspx.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:Sampler.cs" caret="170" fromTop="4" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:NameHelper.cs" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:ISampler.cs" caret="188" fromTop="4" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:test/f:lazytest.brail" caret="221" fromTop="10" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Global.asax.cs" caret="937" fromTop="15" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:layouts/f:default.brail" caret="196" fromTop="4" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:foo/f:index.brail" caret="120" fromTop="3" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="544" fromTop="12" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:IProductService.cs" caret="212" fromTop="5" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:ProductCategoryService.cs" caret="322" fromTop="11" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Web.config" caret="692" fromTop="14" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Default.aspx" caret="488" fromTop="16" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Entities/f:Category.cs" caret="829" fromTop="24" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:hibernate.cfg.xml" caret="1120" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:test/f:lazytest.brail" caret="415" fromTop="20" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Global.asax.cs" caret="2227" fromTop="9" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="999" fromTop="14" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:layouts/f:default.brail" caret="151" fromTop="3" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="1546" fromTop="15" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:layouts/f:default.brail" caret="821" fromTop="12" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="2892" fromTop="12" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="703" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:ISampler.cs" caret="151" fromTop="1" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:ISampler.cs" caret="210" fromTop="24" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:Sampler.cs" caret="172" fromTop="4" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:ISampler.cs" caret="203" fromTop="5" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Utils/f:Sampler.cs" caret="450" fromTop="11" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="487" fromTop="10" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="1060" fromTop="10" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Global.asax.cs" caret="4038" fromTop="14" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:test/f:lazytest.brail" caret="0" fromTop="0" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:test/f:lazytest.brail" caret="94" fromTop="3" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Views/d:layouts/f:default.brail" caret="394" fromTop="15" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:log4net.config" caret="945" fromTop="16" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Controllers/f:TestController.cs" caret="561" fromTop="12" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:ProductCategoryService.cs" caret="263" fromTop="7" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:ProductCategoryService.cs" caret="263" fromTop="7" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:DatabaseAccessObjects/f:ProductCategoryService.cs" caret="3182" fromTop="11" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:Web.config" caret="692" fromTop="14" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/f:hibernate.cfg.xml" caret="815" fromTop="10" />
+      <File id="820174B9-3319-4E52-BD37-8746B3E18EB7/d:Entities/f:Category.cs" caret="456" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="products" priority="1" />
+      <Item value="value" priority="0" />
+      <Item value="public" priority="7" />
+      <Item value="void" priority="3" />
+      <Item value="string" priority="6" />
+      <Item value="var" priority="4" />
+      <Item value="return" priority="4" />
+      <Item value="session" priority="1" />
+      <Item value="RedirectToAction" priority="1" />
+      <Item value="throw" priority="1" />
+      <Item value="new" priority="2" />
+      <Item value="NotImplementedException" priority="0" />
+      <Item value="RenderText" priority="0" />
+      <Item value="Random" priority="0" />
+      <Item value="static" priority="1" />
+      <Item value="Category" priority="4" />
+      <Item value="CreateSampleCategory" priority="0" />
+      <Item value="log4net" priority="0" />
+      <Item value="category" priority="10" />
+      <Item value="PropertyBag" priority="2" />
+      <Item value="message" priority="6" />
+      <Item value="c" priority="0" />
+      <Item value="NameValueCollection" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="RenderView" priority="3" />
+      <Item value="CancelView" priority="0" />
+      <Item value="int" priority="5" />
+      <Item value="service" priority="4" />
+      <Item value="categories" priority="1" />
+      <Item value="categoryDao" priority="2" />
+      <Item value="categoryId" priority="0" />
+      <Item value="HttpContext" priority="0" />
+      <Item value="sessionId" priority="6" />
+      <Item value="NHibernateSessionId" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="entity" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="obj1" priority="1" />
+      <Item value="null" priority="0" />
+      <Item value="IWithSessionId" priority="0" />
+      <Item value="Pagination" priority="0" />
+      <Item value="Product" priority="1" />
+      <Item value="product" priority="1" />
+      <Item value="Name" priority="0" />
+      <Item value="for" priority="2" />
+      <Item value="DateTime" priority="0" />
+      <Item value="Price" priority="0" />
+      <Item value="i" priority="0" />
+      <Item value="IList" priority="1" />
+      <Item value="PersistenceConversation" priority="0" />
+      <Item value="ConversationEndMode" priority="0" />
+      <Item value="EndMode" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="AcceptChanges" priority="0" />
+      <Item value="Sampler" priority="0" />
+      <Item value="typeof" priority="1" />
+      <Item value="ISampler" priority="1" />
+      <Item value="sampler" priority="0" />
+      <Item value="default" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.DatabaseAccessObjects.IProductCategoryService">
+      <Item value="FindAllCategoriesByCpBT" priority="1" />
+      <Item value="FindAllCategoriesBySpR" priority="0" />
+      <Item value="DeleteCategory" priority="0" />
+      <Item value="Commit" priority="0" />
+      <Item value="FindCategoryById" priority="1" />
+      <Item value="FindCategoryById_SpR" priority="1" />
+      <Item value="FindAllCategories" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NHibernate.ISession">
+      <Item value="GetHashCode" priority="2" />
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty" priority="0" />
+      <Item value="Format" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.Entities.Category">
+      <Item value="Name" priority="1" />
+      <Item value="AddProduct" priority="0" />
+      <Item value="Products" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.Controllers.TestController">
+      <Item value="Redirect" priority="0" />
+      <Item value="Index" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.DatabaseAccessObjects.IDao`1">
+      <Item value="Get" priority="1" />
+      <Item value="ObtainSession" priority="0" />
+      <Item value="TryFind" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContext">
+      <Item value="Session" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpContext">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.DatabaseAccessObjects.IWithSessionId">
+      <Item value="NHibernateSessionId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.Entities.Product">
+      <Item value="Name" priority="0" />
+      <Item value="CreatedOn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@uNhAddIns.Example.MonoRailConversationUsage.Utils.NameHelper">
+      <Item value="GetRandomName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MicroKernel.Registration.Component">
+      <Item value="For" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Practices.ServiceLocation.ServiceLocator">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Practices.ServiceLocation.IServiceLocator">
+      <Item value="GetInstance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:uNhAddIns.Example.MonoRailConversationUsage.Utils.ISampler">
+      <Item value="CreateSampleCategory" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

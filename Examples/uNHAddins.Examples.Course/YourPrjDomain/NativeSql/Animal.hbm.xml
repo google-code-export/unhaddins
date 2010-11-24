@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	assembly="YourPrjDomain"
+	namespace="YourPrjDomain.NativeSql"
+    default-access="field.camelcase">
+
+	<class name="Animal">
+
+		<id name ="Id">
+			<generator class="hilo" />
+		</id>
+
+		<property name="Description"/>
+
+		<property name="BodyWeight" type="float"/>
+
+		<loader query-ref="GetAnimalById" />
+
+		<sql-insert check="rowcount">
+			exec CreateAnimal @description=?, @bodyweight=?, @id=?
+		</sql-insert>
+
+		<sql-update check="rowcount">
+			exec UpdateAnimal @description=?, @bodyweight=?, @id=?
+		</sql-update>
+
+		<sql-delete check="rowcount">
+			exec DeleteAnimal @id=?
+		</sql-delete>
+
+	</class>
+
+	<sql-query name="GetAnimalById">
+		<synchronize table="Animal" />
+		<return class="Animal">
+			<return-property column="Id" name="Id" />
+			<return-property column="Description" name="Description" />
+			<return-property column="BodyWeight" name="BodyWeight" />
+		</return>
+		<![CDATA[
+			exec GetAnimal @Id = ?
+			]]>
+	</sql-query>
+
+	<!-- CREATE THE STORED PROCEDURES WHEN THE SCHEMA IS CREATED -->
+	<database-object>
+		<create>
+			<![CDATA[
+				create procedure dbo.GetAnimal
+						@id		int
+				as
+				begin
+						
+						select * from Animal where Id = @id
+									
+				end
+				]]>
+		</create>
+		<drop>
+			drop procedure dbo.GetAnimal
+		</drop>
+		<dialect-scope name="NHibernate.Dialect.MsSql2000Dialect"/>
+		<dialect-scope name="NHibernate.Dialect.MsSql2005Dialect"/>
+	</database-object>
+
+	<database-object>
+		<create>
+			<![CDATA[
+				create procedure dbo.CreateAnimal
+						@id						int,
+						@description nvarchar(255),
+						@bodyweight	float
+				as
+				begin
+						
+						insert into Animal
+						values (@id, @description, @bodyweight)
+				end
+				]]>
+		</create>
+		<drop>
+			drop procedure dbo.CreateAnimal
+		</drop>
+		<dialect-scope name="NHibernate.Dialect.MsSql2000Dialect"/>
+		<dialect-scope name="NHibernate.Dialect.MsSql2005Dialect"/>
+	</database-object>
+
+	<database-object>
+		<create>
+			<![CDATA[
+				create procedure dbo.UpdateAnimal
+						@id						int,
+						@description	nvarchar(255),
+						@bodyweight		float
+				as
+				begin
+						
+						update Animal
+						set		description = @description,
+									bodyweight = @bodyweight
+						where Id = @id
+									
+				end
+				]]>
+		</create>
+		<drop>
+			drop procedure dbo.UpdateAnimal
+		</drop>
+		<dialect-scope name="NHibernate.Dialect.MsSql2000Dialect"/>
+		<dialect-scope name="NHibernate.Dialect.MsSql2005Dialect"/>
+	</database-object>
+
+	<database-object>
+		<create>
+			<![CDATA[
+				create procedure dbo.DeleteAnimal
+						@id						int
+				as
+				begin
+						
+						delete from Animal
+						where Id = @id
+									
+				end
+				]]>
+		</create>
+		<drop>
+			drop procedure dbo.DeleteAnimal
+		</drop>
+		<dialect-scope name="NHibernate.Dialect.MsSql2000Dialect"/>
+		<dialect-scope name="NHibernate.Dialect.MsSql2005Dialect"/>
+	</database-object>
+
+</hibernate-mapping>

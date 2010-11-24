@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Test"
+				   namespace="uNhAddIns.Test.UserTypes">
+
+  <typedef name="Gender" class="uNhAddIns.Test.UserTypes.GenderType, uNhAddIns.Test"/>
+
+	<class name="PersonMitaMita">
+		<id type="int">
+			<generator class="hilo"/>
+		</id>
+		<property name="Name"/>
+    <property name="Gender" type="Gender" />
+	</class>
+</hibernate-mapping>
