@@ -43,8 +43,6 @@
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF.Tests\WPF.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities\Entities.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities.Tests\Entities.Tests.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Example.ConversationUsage\Example.ConversationUsage.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Example.AopConversationUsage\Example.AopConversationUsage.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator\CastleValidator.build"/>
