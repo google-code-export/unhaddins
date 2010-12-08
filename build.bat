@@ -11,3 +11,4 @@ REM %sn% -k commonfiles\uNhAddIns.snk
 %msbuild% default.build /v:n /t:Build
 :end
 echo -------------------------------
+pause
