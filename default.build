@@ -35,10 +35,6 @@
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF\WCF.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF.Tests\WCFTest.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateTypeResolver\NHibernateTypeResolver.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.ComponentBehaviors\ComponentBehaviors.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.ComponentBehaviors.Tests\ComponentBehaviors.Tests.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.ComponentBehaviors.Castle\ComponentBehaviors.Castle.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.ComponentBehaviors.Castle.Tests\ComponentBehaviors.Castle.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF.Tests\WPF.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities\Entities.build"/>
