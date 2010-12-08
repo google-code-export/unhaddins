@@ -82,10 +82,6 @@
       <Project>{0C444B46-80FD-47D6-BB7C-848EB1626FED}</Project>
       <Name>uNhAddIns.Adapters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\uNhAddIns.ComponentBehaviors\uNhAddIns.ComponentBehaviors.csproj">
-      <Project>{AD94970A-AAB3-4692-8A69-ABDD9C1D92BF}</Project>
-      <Name>uNhAddIns.ComponentBehaviors</Name>
-    </ProjectReference>
     <ProjectReference Include="..\uNhAddIns.NHibernateTypeResolver\uNhAddIns.NHibernateTypeResolver.csproj">
       <Project>{A57F0E70-9283-414F-B697-1637F11B01FB}</Project>
       <Name>uNhAddIns.NHibernateTypeResolver</Name>

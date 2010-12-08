@@ -116,14 +116,6 @@
       <Project>{0140ED11-A9A2-4795-9BE9-22E86A9F0057}</Project>
       <Name>uNhAddIns.CastleAdapters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\uNhAddIns.ComponentBehaviors\uNhAddIns.ComponentBehaviors.csproj">
-      <Project>{AD94970A-AAB3-4692-8A69-ABDD9C1D92BF}</Project>
-      <Name>uNhAddIns.ComponentBehaviors</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\uNhAddIns.ComponentBehaviors.Castle\uNhAddIns.ComponentBehaviors.Castle.csproj">
-      <Project>{5C999026-7D20-495E-BD31-63993EF308BB}</Project>
-      <Name>uNhAddIns.ComponentBehaviors.Castle</Name>
-    </ProjectReference>
     <ProjectReference Include="..\uNhAddIns.NHibernateValidator\uNhAddIns.NHibernateValidator.csproj">
       <Project>{6C864615-C94A-49A7-9556-55955E6A90BA}</Project>
       <Name>uNhAddIns.NHibernateValidator</Name>

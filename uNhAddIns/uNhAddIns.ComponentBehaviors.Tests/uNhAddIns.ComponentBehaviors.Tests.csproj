@@ -60,12 +60,6 @@
     <Compile Include="DefaultBehaviorStoreFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\uNhAddIns.ComponentBehaviors\uNhAddIns.ComponentBehaviors.csproj">
-      <Project>{AD94970A-AAB3-4692-8A69-ABDD9C1D92BF}</Project>
-      <Name>uNhAddIns.ComponentBehaviors</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
