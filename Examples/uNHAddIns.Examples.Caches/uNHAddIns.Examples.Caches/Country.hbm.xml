@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="uNHAddIns.Examples.Caches"
+                   namespace="uNHAddIns.Examples.Caches"
+									 default-lazy="false">
+
+  <class name="Country">
+		<cache usage="nonstrict-read-write" />
+
+    <id name="Id">
+      <generator class="hilo" />
+    </id>
+
+		<property name="Name"/>
+		
+		<property name="ContinentName"/>
+    
+  </class>
+
+	<query name="GetCountryByContinent" cacheable="true">
+		from Country
+		where ContinentName = :ContinentName
+	</query>
+  
+</hibernate-mapping>

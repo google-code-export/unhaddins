@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   default-lazy="false"
+                   namespace="YourPrjDomain.Associations.OneToOne"
+                   assembly="YourPrjDomain"
+                   >
+
+
+  <class name="Manager">
+    <id name="Id">
+      <generator class="identity"/>
+    </id> 
+    <property name="FullName" />
+    <one-to-one name="ManageTo" class="Department"  constrained="true"/>
+  </class>
+
+  <class name="Department">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Name"/>
+    <!--<property name="ManagedBy"/>-->
+    <one-to-one name="ManagedBy" class="Manager" />
+  </class>
+
+</hibernate-mapping>
+

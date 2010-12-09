@@ -1,0 +1,30 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="uNhAddIns.WPF.Tests"
+        				   namespace="uNhAddIns.WPF.Tests.SampleDomain">
+  
+  <!--extracted from chinook-->
+  
+   <class name="Invoice">
+       <id name="Id" column="InvoiceId">
+           <generator class="hilo"/>
+       </id>
+       <bag name="Lines" cascade="all" inverse="true"
+            collection-type="uNhAddIns.WPF.Collections.Types.ObservableBagType`1[InvoiceLine], uNhAddIns.WPF">
+         <key column="InvoiceId"/>
+         <one-to-many class="InvoiceLine" />
+       </bag>
+
+   </class>
+
+   <class name="InvoiceLine">
+       <id name="Id" column="InvoiceLineId">
+           <generator class="hilo"/>
+       </id>
+
+       <many-to-one name="Invoice"
+                    column="InvoiceId"
+                    not-null="true"
+                    class="Invoice"/>
+   </class>
+
+</hibernate-mapping>

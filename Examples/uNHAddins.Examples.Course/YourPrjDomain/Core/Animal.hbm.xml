@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	assembly="YourPrjDomain"
+	namespace="YourPrjDomain.Core"
+    default-access="field.camelcase">
+
+  <class name="Animal">
+
+    <id name ="Id">
+      <generator class="increment" />
+    </id>
+    <discriminator column="ANIMAL_TYPE" type="String" />
+    <property name="Description"/>
+    <property name="BodyWeight" type="float"/>
+
+    <subclass name="Suricato" discriminator-value="SURICATO">
+      <property name="Leader"/>
+    </subclass>
+
+  </class>
+
+
+  <query name="SuricatoById">
+    <![CDATA[
+        from Suricato where Id = :value
+    ]]>
+  </query>
+<!--
+	<sql-query name="SuricatoById">
+		<return alias="mysr" class="Suricato"/>
+		SELECT {mysr.*} FROM ANIMAL mysr WHERE mysr.ANIMAL_TYPE = 'SURICATO' AND mysr.Id = :value
+	</sql-query>-->
+</hibernate-mapping>

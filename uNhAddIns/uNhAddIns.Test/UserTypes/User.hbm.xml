@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Test"
+				   namespace="uNhAddIns.Test.UserTypes" default-lazy="false">
+	
+	<typedef class="uNhAddIns.UserTypes.EncryptedString, uNHAddIns" name="Encrypted">
+		<param name="encryptor">uNhAddIns.UserTypes.uNHAddinsEncryptor, uNhAddIns</param>
+		<param name="encryptionKey">myRGBKey</param>
+	</typedef>
+	
+	<typedef class="uNhAddIns.UserTypes.EncryptedString, uNHAddIns" name="EncryptedDefault"/>
+
+	<typedef class="uNhAddIns.UserTypes.TrimString, uNHAddIns" name="Trimmed" />
+	
+  <class name="User" table="Users">
+    <id name="Id" type="int">
+      <generator class="assigned"/>
+    </id>
+    
+    <property name="Name"/>
+    
+    <property name="Password" 
+              type="Encrypted"
+              not-null="false"/>
+
+		<property name="OtherEncripted" type="EncryptedDefault"/>
+
+		<property name="Description">
+			<column name="Description" sql-type="CHAR(32)" />
+		</property>
+
+		<property name="TrimmedDescription"
+							type="Trimmed">
+			<column name="TrimmedDescription" sql-type="CHAR(32)" />
+		</property>
+  </class>
+</hibernate-mapping>

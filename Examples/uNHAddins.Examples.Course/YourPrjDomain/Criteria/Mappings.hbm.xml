@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="YourPrjDomain"
+                   namespace="YourPrjDomain.Criteria"
+                   default-lazy="false">
+
+  <class name="Customer">
+
+    <id name="Id">
+      <generator class="hilo" />
+    </id>
+    
+    <property name="FirstName"/>
+    <property name="LastName"/>
+    <property name="Born"/>
+    <property name="CustomerId"/>
+
+    <!--property name="QuantityOfAccounts" formula="(select count(*) from Accounts where Accounts.CustomerId=Id)" type="Int32"/-->
+
+    <component name="City" class="City">
+      <property name="Name"/>
+      <property name="Zip"/>
+    </component>
+
+    <set name="Accounts" inverse="false" cascade="all-delete-orphan">
+      <key column="CustomerId"/>
+      <one-to-many class ="Account" />
+    </set>
+    
+    <!--set name="Accounts">
+      <key column="CustomerId"/>
+      <composite-element class="Account">
+        <property name="AccountNumber"/>
+        <property name="IsActive"/>
+        <property name="Opened"/>
+        <property name="Size"/>
+        <property name="AccountType"/>
+      </composite-element>      
+    </set-->    
+    
+  </class>
+
+  <class name="Account">
+    <id name="Id">
+      <generator class="hilo"/>
+    </id>
+    <property name="AccountNumber"/>
+    <property name="IsActive"/>
+    <property name="Opened"/>
+    <property name="Size"/>
+    <property name="AccountType"/>    
+  </class>
+  
+</hibernate-mapping>

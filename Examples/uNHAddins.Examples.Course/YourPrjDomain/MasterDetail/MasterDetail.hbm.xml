@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	assembly="YourPrjDomain"
+	namespace="YourPrjDomain.MasterDetail"
+    default-access="field.camelcase-underscore">
+
+	<class name="Master">
+		<id name="Id" type="int" access="nosetter.camelcase-underscore">
+			<generator class="hilo"/>
+		</id>
+		<property name="Name" not-null="true"/>
+
+		<bag name="Details" inverse="true" cascade="all-delete-orphan">
+			<key column="masterId"/>
+			<one-to-many class="Detail"/>
+		</bag>
+	</class>
+	
+	<class name="Detail">
+		<id name="Id" type="int" access="nosetter.camelcase-underscore">
+			<generator class="hilo"/>
+		</id>
+		<many-to-one name="Master" column="masterId" class="Master" access="nosetter.camelcase-underscore"/>
+		<property name="Description" not-null="true"/>
+	</class>
+</hibernate-mapping>

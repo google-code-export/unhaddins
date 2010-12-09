@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Test"
+				   namespace="uNhAddIns.Test.Audit">
+	
+	<class name="Person">
+		<meta attribute="Auditable"/>
+		<id name="Id">
+			<generator class="hilo"/>
+		</id>
+		<natural-id>
+			<property name="Identification"/>
+		</natural-id>
+		<property name="Name"/>
+		<many-to-one name="ActualAddress" cascade="save-update"/>
+		<set name="Nicks" cascade="all">
+			<key column="personId"/>
+			<element column="nick"/>
+		</set>
+		<bag name="Pets" cascade="refresh">
+			<key column="personId"/>
+			<one-to-many class="Animal"/>
+		</bag>
+	</class>
+</hibernate-mapping>

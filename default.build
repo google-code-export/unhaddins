@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+
+	<PropertyGroup>
+		<RootDir>$(MSBuildProjectDirectory)</RootDir>
+		<Configuration>Debug</Configuration>
+		<IncludePostSharpAdapter>False</IncludePostSharpAdapter>
+	</PropertyGroup>
+
+	<Target Name = "AutomatedBuild" DependsOnTargets="DefineBuild;RunGenerateAssemblyInfo;RunBuild;RunTest"/>
+	<Target Name = "Build" DependsOnTargets="DefineBuild;RunGenerateAssemblyInfo;RunBuild"/>
+	<Target Name = "Test" DependsOnTargets="DefineBuild;RunGenerateAssemblyInfo;RunBuild;RunTest"/>
+	<Target Name = "GenerateAssemblyInfo" DependsOnTargets="DefineBuild;RunGenerateAssemblyInfo"/>
+		
+	<Target Name="DefineBuild">
+		<ItemGroup>	
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns\uNhAddIns2.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Adapters\Adapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Adapters.Common\Adapters.Common.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CommonServiceLocatorAdapters\CommonServiceLocatorAdapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CommonServiceLocatorAdapters.Tests\CommonServiceLocatorAdapters.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleAdapters\CastleAdapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleAdapters.Tests\CastleAdapters.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NinjectAdapters\NinjectAdapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NinjectAdapters.Tests\NinjectAdapters.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.LinFuAdapters\LinFuAdapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.SpringAdapters\SpringAdapters.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.SpringAdapters.Tests\SpringAdapters.Tests.build"/>	
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Test\Test.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.TestUtils\TestUtils.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Adapters.CommonTests\Adapters.CommonTests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.TestUtils.Tests\TestUtils.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Web\Web.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF\WPF.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF\WCF.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF.Tests\WCFTest.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateTypeResolver\NHibernateTypeResolver.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF.Tests\WPF.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities\Entities.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities.Tests\Entities.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator\CastleValidator.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator.Tests\CastleValidator.Tests.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.PostSharpAdapters\PostSharpAdapters.build" Condition="$(IncludePostSharpAdapter)" />
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.PostSharpAdapters.Tests\PostSharpAdapters.Tests.build"  Condition="$(IncludePostSharpAdapter)" />
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB\VAB.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB.Tests\VAB.Tests.build"/>
+		</ItemGroup>
+	</Target>
+
+	<Import Project="BuildCommon\Common.build"/>
+</Project>

@@ -1,0 +1,32 @@
+﻿<head>
+</head>
+<span class="header">Listing committed categories of product:</span>
+<br />
+<div id="content">
+<table class="grid">
+    <thead>
+		<th>Name</th>
+		<th>SessionId</th>
+		<th>CreatedOn</th>
+		<th>Delete and Commit</th>
+		<th>Products (Conversation)</th>
+		<th>Products (Session Per Request, expect exception)</th>
+    </thead>
+    <tbody>
+<% for i in items : %>
+     <tr>
+      <td>${i.Name}</td>
+	  <td>${i.NHibernateSessionId}</td>
+	  <td>${i.CreatedOn.ToString("HH:mm")}</td>
+	  <td><a href="delete.rails?id=${i.Id}">Delete</a></td>
+	  <td><a href="getProducts.rails?categoryId=${i.Id}">Get</a></td>
+	  <td><a href="getProductsWithLazyLoadException.rails?categoryId=${i.Id}">Get</a></td>
+     </tr>
+<% end %>
+    </tbody>
+</table>
+</div>
+<hr />
+The last action was:
+<span class="redtext">${message}</span>
+<br />
