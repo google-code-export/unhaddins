@@ -34,20 +34,21 @@
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF\WPF.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF\WCF.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WCF.Tests\WCFTest.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateTypeResolver\NHibernateTypeResolver.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.WPF.Tests\WPF.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities\Entities.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.Entities.Tests\Entities.Tests.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator\CastleValidator.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator.Tests\CastleValidator.Tests.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.PostSharpAdapters\PostSharpAdapters.build" Condition="$(IncludePostSharpAdapter)" />
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.PostSharpAdapters.Tests\PostSharpAdapters.Tests.build"  Condition="$(IncludePostSharpAdapter)" />
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB\VAB.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateTypeResolver\NHibernateTypeResolver.build"/>
+
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB\VAB.build"/>
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB.Tests\VAB.Tests.build"/>
-		</ItemGroup>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator\CastleValidator.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator.Tests\CastleValidator.Tests.build"/>
+    </ItemGroup>
 	</Target>
 
 	<Import Project="BuildCommon\Common.build"/>
