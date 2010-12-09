@@ -41,13 +41,13 @@
 			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.PostSharpAdapters.Tests\PostSharpAdapters.Tests.build"  Condition="$(IncludePostSharpAdapter)" />
       <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateTypeResolver\NHibernateTypeResolver.build"/>
 
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB\VAB.build"/>
-			<BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.VAB.Tests\VAB.Tests.build"/>
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator\CastleValidator.build"/>
-      <BuildFiles Include="$(RootDir)\uNhAddIns\uNhAddIns.CastleValidator.Tests\CastleValidator.Tests.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.NHibernateValidator\NHibernateValidator.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.VAB\VAB.build"/>
+			<BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.VAB.Tests\VAB.Tests.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.DataAnnotations\DataAnnotations.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.DataAnnotations.Tests\DataAnnotations.Tests.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.CastleValidator\CastleValidator.build"/>
+      <BuildFiles Include="$(RootDir)\uNhAddIns\ValidationAdapters\uNhAddIns.CastleValidator.Tests\CastleValidator.Tests.build"/>
     </ItemGroup>
 	</Target>
 
