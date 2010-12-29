@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="SessionManagement.Domain"
+				   namespace="SessionManagement.Domain">
+  <class name="Product" table="Products">
+    <id name="Id" type="Int32">
+      <generator class="hilo"/>
+    </id>
+
+    <property name="Code" />
+    <property name="Description"/>
+    <property name="Price"/>
+  </class>
+
+  <query name="GetAllProductsOrderedByCode">
+    from Product product
+    order by product.Code
+  </query>
+
+  <query name="GetProductByCode">
+    from Product product
+    where product.Code = :code
+  </query>
+</hibernate-mapping>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="ChinookMediaManager.GUI.Albums.Browse.AlbumsBrowseView"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			xmlns:Controls="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit">
+	<DockPanel>
+		<Controls:DataGrid AutoGenerateColumns="True" ItemsSource="{Binding Subject}"
+						   IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" 
+						   VerticalScrollBarVisibility="Visible" />
+	</DockPanel>
+</UserControl>

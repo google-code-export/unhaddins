@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.GUI", "ChinookMediaManager.GUI\ChinookMediaManager.GUI.csproj", "{C3DB558C-F203-4132-9635-B4DEC818A011}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1DFC9ADC-1832-425F-A59E-484E18B1B29F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Domain", "ChinookMediaManager.Domain\ChinookMediaManager.Domain.csproj", "{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Domain.Impl", "ChinookMediaManager.Domain.Impl\ChinookMediaManager.Domain.Impl.csproj", "{47F559A1-96FC-42A2-8C66-E94A340E8FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Data", "ChinookMediaManager.Data\ChinookMediaManager.Data.csproj", "{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Data.Impl", "ChinookMediaManager.Data.Impl\ChinookMediaManager.Data.Impl.csproj", "{6DC83393-3D32-4E87-82EE-8D2E50176C07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CC8D22E1-4376-4951-8C5F-8F9BCDA14834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Domain.Test", "ChinookMediaManager.Domain.Test\ChinookMediaManager.Domain.Test.csproj", "{055E275D-791F-4CFB-AA57-19BA944A2E04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{44A6B3E0-B6C5-4FE9-AA1D-4BECEFCE2926}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D10AB1DF-29EC-456A-B8F0-D64F077D2AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.GuyWire", "ChinookMediaManager.GuyWire\ChinookMediaManager.GuyWire.csproj", "{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookMediaManager.Data.Test", "ChinookMediaManager.Data.Test\ChinookMediaManager.Data.Test.csproj", "{386EEF5F-3E82-490E-84AF-4380957DC073}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3DB558C-F203-4132-9635-B4DEC818A011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DB558C-F203-4132-9635-B4DEC818A011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DB558C-F203-4132-9635-B4DEC818A011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DB558C-F203-4132-9635-B4DEC818A011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F559A1-96FC-42A2-8C66-E94A340E8FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F559A1-96FC-42A2-8C66-E94A340E8FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F559A1-96FC-42A2-8C66-E94A340E8FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F559A1-96FC-42A2-8C66-E94A340E8FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC83393-3D32-4E87-82EE-8D2E50176C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC83393-3D32-4E87-82EE-8D2E50176C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC83393-3D32-4E87-82EE-8D2E50176C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC83393-3D32-4E87-82EE-8D2E50176C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055E275D-791F-4CFB-AA57-19BA944A2E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055E275D-791F-4CFB-AA57-19BA944A2E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055E275D-791F-4CFB-AA57-19BA944A2E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055E275D-791F-4CFB-AA57-19BA944A2E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386EEF5F-3E82-490E-84AF-4380957DC073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386EEF5F-3E82-490E-84AF-4380957DC073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386EEF5F-3E82-490E-84AF-4380957DC073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386EEF5F-3E82-490E-84AF-4380957DC073}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C3DB558C-F203-4132-9635-B4DEC818A011} = {D10AB1DF-29EC-456A-B8F0-D64F077D2AA0}
+		{B036A41C-815F-4A3F-A4D5-88DBCCE1F7F6} = {1DFC9ADC-1832-425F-A59E-484E18B1B29F}
+		{47F559A1-96FC-42A2-8C66-E94A340E8FDF} = {1DFC9ADC-1832-425F-A59E-484E18B1B29F}
+		{1E1A7CE8-81F9-455E-A7D2-C9E644F1B951} = {1DFC9ADC-1832-425F-A59E-484E18B1B29F}
+		{6DC83393-3D32-4E87-82EE-8D2E50176C07} = {1DFC9ADC-1832-425F-A59E-484E18B1B29F}
+		{055E275D-791F-4CFB-AA57-19BA944A2E04} = {CC8D22E1-4376-4951-8C5F-8F9BCDA14834}
+		{386EEF5F-3E82-490E-84AF-4380957DC073} = {CC8D22E1-4376-4951-8C5F-8F9BCDA14834}
+		{F6AFEAF8-1FE6-43F9-A8B8-94CDF5A02D28} = {44A6B3E0-B6C5-4FE9-AA1D-4BECEFCE2926}
+	EndGlobalSection
+EndGlobal

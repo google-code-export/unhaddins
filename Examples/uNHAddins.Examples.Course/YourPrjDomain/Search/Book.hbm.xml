@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	assembly="YourPrjDomain"
+	namespace="YourPrjDomain.Search"
+    default-access="field.camelcase"
+		default-lazy="false">
+
+  <class name="Book">
+
+    <id name ="Id">
+      <generator class="identity" />
+    </id>
+
+		<property name="Name" not-null="true"  />
+		
+		<property name="Author"  />
+		
+		<property name="Summary" length="4000" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Test"
+				   namespace="uNhAddIns.Test.Audit">
+
+	<class name="Address">
+		<meta attribute="Auditable"/>
+		<id name="Id">
+			<generator class="hilo"/>
+		</id>
+		<property name="StreetName"/>
+		<property name="CivicNumber"/>
+		<property name="Info">
+			<meta attribute="Auditable">false</meta>
+		</property>
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	                  assembly="YourPrjDomain"
+	                  namespace="YourPrjDomain.Associations.ManyToMany"
+                    default-lazy="false">
+  
+  <class name="Item">
+    <id name="Id">
+      <generator class="native"/>        
+    </id>
+    <property name="Description"/>
+
+    <bag name="Categories" table="CATEGORY_ITEM"  >
+      <key column="IdItem"/>
+      <many-to-many class="Category" column="IdCategory" />
+    </bag>
+    
+  </class>
+
+  <class name="Category">
+    <id name="Id">
+      <generator class="native"/>
+    </id>
+    
+    <property name="Description"/>
+
+    <bag name="Items" table="CATEGORY_ITEM" inverse="true" >
+      <key column="IdCategory"/>
+      <many-to-many class="Item" column="IdItem"/>
+    </bag>
+    
+  </class>
+  
+</hibernate-mapping>

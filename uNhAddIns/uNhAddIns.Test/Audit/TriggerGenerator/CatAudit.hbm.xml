@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Test"
+				   namespace="uNhAddIns.Test.Audit.TriggerGenerator">
+  <typedef class="NHibernate.Type.EnumStringType`1[[uNhAddIns.Audit.TriggerGenerator.TriggerActions, uNhAddIns]], NHibernate"
+           name="triggerActions" />
+  <class name="CatAudit" 
+         schema-action="none">
+    <composite-id>
+      <key-property name="Id" />
+      <key-property name="AuditUser" />
+      <key-property name="AuditTimestamp" />
+    </composite-id>
+		<property name="Color"/>
+    <property name="AuditOperation" type="triggerActions" />
+	</class>
+	
+</hibernate-mapping>

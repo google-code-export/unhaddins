@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="uNhAddIns.Example.AopConversationUsage"
+				   namespace="uNhAddIns.Example.AopConversationUsage.Entities"
+				   default-access="backfield">
+
+	<class name="Animal" abstract="true">
+		<id name="Id">
+			<generator class="hilo"/>
+		</id>
+		<discriminator column="kind"/>
+		<property name="Description"/>
+
+		<subclass name="Reptile">
+			<property name="BodyTemperature"/>
+		</subclass>
+
+		<subclass name="Human">
+			<property name="Name"/>
+			<property name="NickName"/>
+			<property name="Birthdate" type="Date"/>
+		</subclass>
+	</class>
+
+	<class name="Family`1[[Reptile]]" entity-name="ReptilesFamily"
+		   table="Families" discriminator-value="Reptile" where="familyKind = 'Reptile'">
+		<id name="Id">
+			<generator class="hilo"/>
+		</id>
+		<discriminator column="familyKind"/>
+		<many-to-one name="Father" class="Reptile" cascade="save-update"/>
+		<many-to-one name="Mother" class="Reptile" cascade="save-update"/>
+		<set name="Childs" generic="true" cascade="save-update">
+			<key column="familyId"/>
+			<one-to-many class="Reptile"/>
+		</set>
+	</class>
+
+	<class name="Family`1[[Human]]" entity-name="HumanFamily"
+		   table="Families" discriminator-value="Human" where="familyKind = 'Human'">
+		<id name="Id">
+			<generator class="hilo"/>
+		</id>
+		<discriminator column="familyKind"/>
+		<many-to-one name="Father" class="Human" cascade="save-update"/>
+		<many-to-one name="Mother" class="Human" cascade="save-update"/>
+		<set name="Childs" generic="true" cascade="save-update">
+			<key column="familyId"/>
+			<one-to-many class="Human"/>
+		</set>
+	</class>
+	
+	<query name="ReptilesFamily.ByFather">
+		<query-param name="fatherId" type="int"/>
+		from ReptilesFamily fa where fa.Father.Id = :fatherId
+	</query>
+	<query name="ReptilesFamily.All">
+		<query-param name="fatherId" type="int"/>
+		from ReptilesFamily
+	</query>
+
+	<query name="HumanFamily.ByFather">
+		<query-param name="fatherId" type="int"/>
+		from HumanFamily fa where fa.Father.Id = :fatherId
+	</query>
+	<query name="HumanFamily.All">
+		<query-param name="fatherId" type="int"/>
+		from HumanFamily
+	</query>
+
+</hibernate-mapping>

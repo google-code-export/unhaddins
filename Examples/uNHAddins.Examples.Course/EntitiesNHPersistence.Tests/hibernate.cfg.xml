@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+	<session-factory name="EntitiesNHPersistence.Tests">
+		<property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+		<property name="connection.connection_string">
+      Data Source=localhost\SQLEXPRESS;Initial Catalog=uNHAddins;Integrated Security=True;Pooling=False
+    </property>
+		<property name="connection.provider">uNHAddins.Examples.Course.Tests.DebugConnectionProvider, uNHAddins.Examples.Course.Tests</property>
+		<property name="connection.isolation">ReadCommitted</property>
+		<property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+
+		<property name="prepare_sql">false</property>
+		<property name="query.startup_check">false</property>
+		<property name="show_sql">false</property>
+		<property name="command_timeout">30</property>
+		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+		<!-- 
+			NOTE:  
+			we are adding all mapping here but you can override TestCase.Configure(Configuration)
+			to add your mapping for each unit test
+		-->
+		<!--mapping assembly="YourPrjDomain"/-->
+	</session-factory>
+</hibernate-configuration>
+

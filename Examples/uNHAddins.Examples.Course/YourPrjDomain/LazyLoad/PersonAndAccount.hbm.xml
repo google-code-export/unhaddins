@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	assembly="YourPrjDomain"
+	namespace="YourPrjDomain.LazyLoad">
+
+	<class name="Person" lazy="true">
+
+		<id name ="Id">
+			<generator class="identity" />
+		</id>
+
+		<property name="Name" />
+
+		<bag name="Accounts" cascade="save-update" batch-size="10">
+			<key column="PersonId" />
+			<one-to-many class="Account" />
+		</bag>
+
+	</class>
+
+	<class name="Account" >
+		<id name="Id">
+			<generator class="identity"/>
+		</id>
+
+		<many-to-one name="BelongTo" class="Person" not-null="true"/>
+
+	</class>
+
+</hibernate-mapping>
