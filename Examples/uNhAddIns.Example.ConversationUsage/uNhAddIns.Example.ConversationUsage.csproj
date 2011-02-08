@@ -55,16 +55,15 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="uNhAddIns, Version=3.0.0.768, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\uNhAddIns\bin\Debug\uNhAddIns.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BusinessLogic\FamilyCrudModel.cs" />
     <Compile Include="BusinessLogic\IFamilyCrudModel.cs" />
     <Compile Include="BusinessLogic\PersistenceConversationalModel.cs" />
@@ -84,14 +83,7 @@
     <Compile Include="MultiTiers\IServiceLocator.cs" />
     <Compile Include="MultiTiers\ServiceLocator.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceLocatorProvider.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\uNhAddIns\uNhAddIns.csproj">
-      <Project>{59233B1D-6DDE-4C05-A9E9-D0A1A8144112}</Project>
-      <Name>uNhAddIns</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
