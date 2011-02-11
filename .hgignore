@@ -23,6 +23,8 @@ syntax: glob
 *.lib
 *.sbr
 *.scc
+*.pidb
+*.userprefs
 [Bb]in
 [Db]ebug*/
 obj/
